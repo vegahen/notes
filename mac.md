@@ -13,7 +13,7 @@ setopt PROMPT_SUBST
 
 gitbranch() {
     local message
-    message=$(git branch 2>&1 | grep "^* " | sed "s/^* / %F{purple}on%f %F{green}%B/" | sed "s/$/%b%f/" | sed "s/^ %F{purple}on%f %F{green}%B(/ %F{purple}with%f %F{yellow}%B/" | sed "s/)%b%f$$
+    message=$(git branch 2>&1 | grep "^* " | sed "s/^* / %F{purple}on%f %F{green}%B/" | sed "s/$/%b%f/" | sed "s/^ %F{purple}on%f %F{green}%B(/ %F{purple}with%f %F{yellow}%B/" | sed "s/)%b%f$/%b%f/")
     echo $message
 }
 
