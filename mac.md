@@ -4,8 +4,9 @@
 installed_packages=$(brew list --formula | sed "s/^/ /; s/$/$/")
 for package in $(brew leaves)
     brew deps --tree --formula $package | grep -E "$installed_packages|^$package$|^$"
-# terminal profile ~/.zshrc
 ```
+
+# terminal profile ~/.zshrc
 
 ```
 setopt PROMPT_SUBST
