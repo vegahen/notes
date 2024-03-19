@@ -11,6 +11,9 @@ for package in $(brew leaves)
 ```
 setopt PROMPT_SUBST
 
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+
 gitbranch() {
     local message
     message=$(git branch 2>&1 | grep "^* " | sed "s/^* / %F{purple}on%f %F{green}%B/" | sed "s/$/%b%f/" | sed "s/^ %F{purple}on%f %F{green}%B(/ %F{purple}with%f %F{yellow}%B/" | sed "s/)%b%f$/%b%f/")
