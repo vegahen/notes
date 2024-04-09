@@ -50,4 +50,6 @@ kubectl get rs
 
 kubectl rollout history deploy web-deploy
 
-kubectl rollout undo deploy web-deploy --to-revision 1
+kubectl rollout undo deploy web-deploy --to-revision 1'
+
+kubectl exec -it my-pod sh
